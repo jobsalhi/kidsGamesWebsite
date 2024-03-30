@@ -1,0 +1,55 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  /* text-transform: capitalize; */
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: 'Gilroy Bold';
+  src: url('./fonts/Gilroy-Bold.ttf') format('truetype'),
+       
+  /* Add other font properties if needed */
+}
+
+
+@font-face {
+  font-family: 'Andis';
+  src: url('./fonts/Andis-regular.otf') format('opentype'),
+       
+  /* Add other font properties if needed */
+}
+@font-face {
+  font-family: 'Cygnet';
+  src: url('./fonts/Cygnet_Regular.ttf') format('truetype'),
+       
+  /* Add other font properties if needed */
+}
+
+h2{
+  font-family: "Cygnet";
+}
