@@ -1,5 +1,13 @@
 @import "./_variables";
 
+.App{
+
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /* This ensures that the container takes up the full height of the viewport */
+
+}
+
 .Navbar{
     background-color: #FDF6EE;
     padding: 2rem 0;
@@ -8,10 +16,15 @@
 }
 .hero{
     display: flex;
+    flex-grow: 1;
 }
+
+
+
 .content{
-    width: 100vw;
-    height: 100vh;
+    // width: 100vw;
+    // height: 100vh;
+    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,30 +34,45 @@
 .sidebar {
     background-color: #FDF6EE;
     position: relative;
+    max-width: 30%;
+    min-width: 20rem;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
-    // width: 15rem;
-    // height: 100vh;
     transition: 0.5s all;
 
     
 }
 
 .trigger{
-    height: 1rem;
-    flex: 0 0 auto;
-    background-color: black;
+    // height: 1rem;
+  background-color: red;
+  display: flex;
+  justify-content: flex-end; /* Aligns the child element to the far left */
+  padding: .4rem;
 }
 
 .options{
     flex: 1;
     display: flex;
     flex-direction: column;
-    
+    justify-content: space-around;
     .ours,.pairs,.story{
         flex-grow: 1;
-        a{display: flex;}
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        border: solid 1px;
+        a{display: flex;
+            .title{
+                text-align: center;
+                margin: auto 0;
+            }
+            }
+            img{
+                max-width: 30%;
+                min-width: 2rem;
+            }
     }
 }
