@@ -1,16 +1,25 @@
+import {  useState } from "react";
 import pair from "../images/pair.png";
 import ours from "../images/polar.png";
 import story from "../images/story.png";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
+
 
 function Sidebar() {
+  const [isOpen, setIsOpen] = useState(true);
+
+
   return (
-    <div className="sidebar">
+    <div className={isOpen? "sidebar" : "sidebar active"}>
       <div className="trigger">
-      <FaArrowRight />
+      {isOpen? <FaArrowLeftLong onClick={()=>{setIsOpen(!isOpen)}}/> : <FaArrowRightLong onClick={()=>{setIsOpen(!isOpen)}}/>}
+      
+      
+      
       </div>
 
-      <div className="options">
+      <div className={isOpen? "options" : "options active"}>
         <div className="ours">
           <a href="/">
             <img src={ours} alt="" />

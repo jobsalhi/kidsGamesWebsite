@@ -1,78 +1,121 @@
 @import "./_variables";
 
-.App{
-
-        display: flex;
-        flex-direction: column;
-        height: 100vh; /* This ensures that the container takes up the full height of the viewport */
-
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* This ensures that the container takes up the full height of the viewport */
 }
-
-.Navbar{
-    background-color: #FDF6EE;
-    padding: 2rem 0;
-    text-align: center;
-    
+.Navbar {
+  background-color: #fdf6ee;
+  padding: 2rem 0;
+  text-align: center;
 }
-.hero{
-    display: flex;
-    flex-grow: 1;
+.hero {
+  display: flex;
+  flex-grow: 1;
 }
-
-
-
-.content{
-    // width: 100vw;
-    // height: 100vh;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.content {
+  // width: 100vw;
+  // height: 100vh;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .sidebar {
-    background-color: #FDF6EE;
-    position: relative;
-    max-width: 30%;
-    min-width: 20rem;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    transition: 0.5s all;
-
-    
-}
-
-.trigger{
-    // height: 1rem;
-  background-color: red;
+  
+  position: relative;
+  max-width: 30%;
+  width:20rem;
+//   min-width: 20rem;
+  top: 0;
+  left: 0;
   display: flex;
-  justify-content: flex-end; /* Aligns the child element to the far left */
-  padding: .4rem;
-}
+  flex-direction: column;
+  transition: 0.5s all;
 
-.options{
+  .trigger {
+    // height: 1rem;
+    background-color: #FEDC95;
+    // transition: 0.5s all;
+
+    display: flex;
+    justify-content: flex-end; /* Aligns the child element to the far left */
+    padding: 0.4rem;
+    * {
+      cursor: pointer;
+      
+    }
+  }
+
+  .options {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    .ours,.pairs,.story{
-        flex-grow: 1;
+    .ours,
+    .pairs,
+    .story {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 1px;
+      a {
         display: flex;
-        justify-content: center; 
-        align-items: center; 
-        border: solid 1px;
-        a{display: flex;
-            .title{
-                text-align: center;
-                margin: auto 0;
-            }
-            }
-            img{
-                max-width: 30%;
-                min-width: 2rem;
-            }
+        align-items: center;
+        .title {
+          text-align: center;
+          margin: auto 0;
+        }
+      }
+      img {
+        max-width: 30%;
+        width : 6rem;
+        margin-left: .3rem;
+
+        // min-width: 6rem;
+      }
     }
+
+    .ours{
+        background-color: #BFE9D1;
+    }
+    .pairs{
+        background-color: #DBF8FE;
+    }
+    .story{
+        background-color: #FFD9CE;
+       
+    }
+  }
+}
+
+
+
+
+.sidebar.active{
+    
+    // min-width: 3rem;
+    
+    width: 0rem;
+    .trigger{
+        width: 2rem;
+
+    }
+    .options.active  {
+        *{border: none;}
+        a{
+        display: none}
+
+    }
+    
+}
+
+
+@media only screen and (max-width: 600px) { 
+   .options{
+    img{display: none;}
+   }
 }
