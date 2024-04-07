@@ -3,7 +3,6 @@
 .App {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* This ensures that the container takes up the full height of the viewport */
 }
 .Navbar {
   background-color: #fdf6ee;
@@ -13,116 +12,115 @@
 .hero {
   display: flex;
   flex-grow: 1;
-}
-.content {
-  // width: 100vw;
-  // height: 100vh;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sidebar {
-  position: relative;
-  max-width: 30%;
-  width: 20rem;
-  //   min-width: 20rem;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  transition: 0.5s all;
-
-  .trigger {
-    // height: 1rem;
-    background-color: #fedc95;
-    transition: 0.5s all;
-
+  height: calc(100vh - 4rem - 36px);
+  .content {
+    flex-grow: 1;
     display: flex;
-    justify-content: flex-end; /* Aligns the child element to the far left */
-    padding: 0.4rem;
-    * {
-      cursor: pointer;
-    //   padding: .2rem;
-      &:hover{
-        background-color: #e3bc67;
-      }
-    }
-
+  
+    justify-content: center;
+    overflow: scroll;
   }
-
-  .options {
-    flex: 1;
+  
+  .sidebar {
+    position: relative;
+    max-width: 30%;
+    width: 20rem;
+    //   min-width: 20rem;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    .ours,
-    .pairs,
-    .story {
-      flex-grow: 1;
+    transition: 0.5s all;
+  
+    .trigger {
+      // height: 1rem;
+      background-color: #fedc95;
+      transition: 0.5s all;
+  
       display: flex;
-      justify-content: center;
-      align-items: center;
-      border: solid 1px;
-      a {
-        display: flex;
-        height: 100%;
-        align-items: center;
-        .title {
-          text-align: center;
-          margin: auto 0;
-          p {
-            font-family: $titleDescription;
-          }
-          opacity: 100;
+      justify-content: flex-end; /* Aligns the child element to the far left */
+      padding: 0.4rem;
+      * {
+        cursor: pointer;
+        //   padding: .2rem;
+        &:hover {
+          background-color: #e3bc67;
         }
       }
-
-      img {
-        max-width: 30%;
-        width: 6rem;
-        margin-left: 0.3rem;
-
-        // min-width: 6rem;
+    }
+  
+    .options {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .ours,
+      .pairs,
+      .story {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px;
+        a {
+          display: flex;
+          height: 100%;
+          align-items: center;
+          .title {
+            text-align: center;
+            margin: auto 0;
+            p {
+              font-family: $titleDescription;
+            }
+            opacity: 100;
+          }
+        }
+  
+        img {
+          max-width: 30%;
+          width: 6rem;
+          margin-left: 0.3rem;
+  
+          // min-width: 6rem;
+        }
       }
-    }
-
-    .ours {
-      background-color: #bfe9d1;
-    }
-
-    .ours:hover {
-      background-color: #a4dabb;
-    }
-    .ours:active {
-      background-color: #90c8a8;
-      img {
-        filter: brightness(80%);
+  
+      .ours {
+        background-color: #bfe9d1;
       }
-    }
-    .pairs {
-      background-color: #dbf8fe;
-    }
-    .pairs:hover {
-      background-color: #afdce4;
-    }
-    .pairs:active {
-      background-color: #96c3ca;
-      img {
-        filter: brightness(80%);
+  
+      .ours:hover {
+        background-color: #a4dabb;
       }
-    }
-    .story {
-      background-color: #ffd9ce;
-    }
-    .story:hover {
-      background-color: #e6b7aa;
-    }
-    .story:active {
-      background-color: #c79a8e;
-      img {
-        filter: brightness(80%);
+      .ours:active {
+        background-color: #90c8a8;
+        img {
+          filter: brightness(80%);
+        }
+      }
+      .pairs {
+        background-color: #dbf8fe;
+      }
+      .pairs:hover {
+        background-color: #afdce4;
+      }
+      .pairs:active {
+        background-color: #96c3ca;
+        img {
+          filter: brightness(80%);
+        }
+      }
+      .story {
+        background-color: #ffd9ce;
+      }
+      .story:hover {
+        background-color: #e6b7aa;
+      }
+      .story:active {
+        background-color: #c79a8e;
+        img {
+          filter: brightness(80%);
+        }
       }
     }
   }
@@ -130,7 +128,7 @@
 
 .sidebar.active {
   // min-width: 3rem;
-  transition: .5s all;
+  transition: 0.5s all;
   width: 0rem;
   .trigger {
     width: 2rem;
@@ -145,43 +143,62 @@
   }
 }
 
-.Pairs{
+
+// jeu des pairs styles 
+
+.Pairs {
   text-align: center;
   font-family: $regular;
-  h1{
+  h1 {
     font-family: $bigTitle;
   }
   // width: 100%;
-  .twoPics{
-    // display: flex;
-    .front{
+  .card {
+    position: relative;
+    img {
       width: 100px;
-
-    }
-
-    .back{
-      width: 100px;
-
+      // max-width: 200px;
+      // min-width: 100px;
+      display: block;
+      border: 2px solid;
+      border-radius: 6px;
     }
   }
+
+.card .front {
+  transform: rotateY(90deg);
+  transition: all ease-in 0.2s;
+  position: absolute;
+}
+.flipped .front {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+
+/* back of card - cover */
+.card .back {
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+.flipped .back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
   .card-grid {
     margin-top: 40px;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
   }
-
-
-
-
-
 
   button {
     background: none;
     border: 2px solid #fff;
     padding: 6px 12px;
     border-radius: 4px;
-    background-color: #CBB8FF;
+    background-color: #cbb8ff;
     color: #543653;
     font-weight: bold;
     cursor: pointer;
@@ -196,7 +213,6 @@
     background-color: #927fcb;
   }
 }
-
 
 
 
