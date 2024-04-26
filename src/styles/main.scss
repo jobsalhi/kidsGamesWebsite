@@ -215,7 +215,40 @@
 }
 
 
-
+// story styles
+.demo-book{
+  margin: 0 auto;
+}
+.page{
+  background-color: #DEF7E5;
+  border: 1px solid black;
+  padding: 1rem;
+  .page-text{
+    font-family: $titleDescription;
+  }
+  // width: 600px;
+}
+.page-cover{
+  background-color: #DEF7E5;
+  background-image: url('../images/cover.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x:center ;
+  color: white;
+  .page-content{
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    height: 100%;
+    h2{
+      // font-family: $bigTitle;
+      color: #543653;
+      font-size: 2em;
+          
+    }
+  
+  }
+}
 @media only screen and (max-width: 600px) {
   .options {
     img {
