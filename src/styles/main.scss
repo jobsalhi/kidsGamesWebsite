@@ -16,11 +16,11 @@
   .content {
     flex-grow: 1;
     display: flex;
-  
+
     justify-content: center;
     overflow: scroll;
   }
-  
+
   .sidebar {
     position: relative;
     max-width: 30%;
@@ -31,12 +31,12 @@
     display: flex;
     flex-direction: column;
     transition: 0.5s all;
-  
+
     .trigger {
       // height: 1rem;
       background-color: #fedc95;
       transition: 0.5s all;
-  
+
       display: flex;
       justify-content: flex-end; /* Aligns the child element to the far left */
       padding: 0.4rem;
@@ -48,7 +48,7 @@
         }
       }
     }
-  
+
     .options {
       flex: 1;
       display: flex;
@@ -75,20 +75,20 @@
             opacity: 100;
           }
         }
-  
+
         img {
           max-width: 30%;
           width: 6rem;
           margin-left: 0.3rem;
-  
+
           // min-width: 6rem;
         }
       }
-  
+
       .ours {
         background-color: #bfe9d1;
       }
-  
+
       .ours:hover {
         background-color: #a4dabb;
       }
@@ -143,8 +143,7 @@
   }
 }
 
-
-// jeu des pairs styles 
+// jeu des pairs styles
 
 .Pairs {
   text-align: center;
@@ -165,25 +164,25 @@
     }
   }
 
-.card .front {
-  transform: rotateY(90deg);
-  transition: all ease-in 0.2s;
-  position: absolute;
-}
-.flipped .front {
-  transform: rotateY(0deg);
-  transition-delay: 0.2s;
-}
+  .card .front {
+    transform: rotateY(90deg);
+    transition: all ease-in 0.2s;
+    position: absolute;
+  }
+  .flipped .front {
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+  }
 
-/* back of card - cover */
-.card .back {
-  transition: all ease-in 0.2s;
-  transition-delay: 0.2s;
-}
-.flipped .back {
-  transform: rotateY(90deg);
-  transition-delay: 0s;
-}
+  /* back of card - cover */
+  .card .back {
+    transition: all ease-in 0.2s;
+    transition-delay: 0.2s;
+  }
+  .flipped .back {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+  }
 
   .card-grid {
     margin-top: 40px;
@@ -214,41 +213,180 @@
   }
 }
 
-
 // story styles
-.demo-book{
+.demo-book {
   margin: 0 auto;
 }
-.page{
-  background-color: #DEF7E5;
+.page {
+  background-color: #def7e5;
   border: 1px solid black;
   padding: 1rem;
-  .page-text{
+  .page-text {
     font-family: $titleDescription;
   }
   // width: 600px;
 }
-.page-cover{
-  background-color: #DEF7E5;
-  background-image: url('../images/cover.png');
+.page-cover {
+  background-color: #def7e5;
+  background-image: url("../images/cover.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x:center ;
+  background-position-x: center;
   color: white;
-  .page-content{
+  .page-content {
     display: flex;
     justify-content: center;
     // align-items: center;
     height: 100%;
-    h2{
+    h2 {
       // font-family: $bigTitle;
       color: #543653;
       font-size: 2em;
-          
     }
-  
   }
 }
+
+// ours styles
+
+.Ours {
+  // background-color: red;
+  text-align: center;
+  h1{
+    font-family: $bigTitle;
+    font-size: 2rem;
+    
+  }
+  .sky {
+    width: 800px;
+    height: 230px;
+    // background-color: black;
+  }
+  .sky img{
+    width: 100%;
+    height: 100%;
+    
+  }
+  .sea {
+    z-index: 1;
+    width: 800px;
+    height: 230px;
+
+    position: relative;
+    overflow: hidden;
+
+    .iceberg {
+      position: absolute;
+      width: 150px;
+      height: 120px;
+      transform-origin: bottom;
+      transition: transform 0.3s ease;
+      // transform: scaleY(0.80);
+      // transform: scaleY(0.75);
+      // transform: scaleY(0.2);
+
+      // pointer-events: none; // Prevent hover events on transparent areas
+      
+
+      &:hover {
+        filter: drop-shadow(5px 5px 5px #222);
+      }
+      &:active{
+        filter: brightness(90%);
+      }
+    }
+    .seaPic{
+
+      width: 100%;
+      height: 100%;
+    }
+    .iceberg1 {
+      top: 0px;
+      left: 70px;
+      // position: relative; /* Add position relative */
+
+    }
+
+    .iceberg2 {
+      top: 70px;
+      left: 150px;
+      z-index: 2;
+    }
+
+    .iceberg3 {
+      top: 40px;
+      left: 260px;
+      z-index: 1;
+    }
+
+    .iceberg4 {
+      top: 20px;
+      right: 170px;
+      z-index: 1;
+    }
+
+    .iceberg5 {
+      top: 5px;
+      right: 60px;
+      z-index: 0;
+    }
+    .bear{
+      position: absolute;
+      width: 50px;
+    }
+
+    .bear1{
+      width: 48px;
+      top: 28px;
+      left: 125px;
+    }
+
+    .bear2{
+      top: 99px;
+      left: 190px;
+      z-index: 2;
+    }
+
+    .bear3{
+      top: 73px;
+      left: 328px;
+      width: 40px;
+    }
+
+    .bear4{
+      top: 48px;
+      left: 520px;
+    }
+
+    .bear5{
+      top: 33px;
+      left: 632px;
+    }
+  }
+  p{
+    font-family: $regular;
+    color:#543653;
+    margin-bottom: .3rem;
+  }
+  button{
+    background: none;
+    border: 2px solid black;
+    padding: 6px 20px;
+    border-radius: 4px;
+    background-color: #cbb8ff;
+    color: #543653;
+    font: $regular;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  button:hover {
+    background-color: #b9a4f1;
+  }
+  button:active {
+    background-color: #9f8ad7;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .options {
     img {
