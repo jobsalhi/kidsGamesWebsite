@@ -294,6 +294,19 @@
         filter: brightness(90%);
       }
     }
+
+    .iceberg100{
+      transform: scaleY(1);
+    }
+    .iceberg80{
+      transform: scaleY(0.8);
+    }
+    .iceberg75{
+      transform: scaleY(0.75);
+    }
+    .iceberg20{
+      transform: scaleY(0.2);
+    }
     .seaPic{
 
       width: 100%;
