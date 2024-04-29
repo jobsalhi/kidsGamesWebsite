@@ -46,7 +46,7 @@ function Story() {
         <PageCover>Histoire de Jimmy</PageCover>
         <Page number={1}>
           <p>
-            Jimmy l'Ours Polaire et le Grand Voyage Il était une fois, dans les
+           Il était une fois, dans les
             vastes étendues glacées de l'Arctique, un jeune ours polaire nommé
             Jimmy. Jimmy était un ours curieux et joueur, qui aimait explorer
             son environnement et rencontrer de nouveaux amis.

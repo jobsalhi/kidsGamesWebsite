@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <div className="Navbar">
-          <h2>logo</h2>
+          <h2>PolarPals</h2>
         </div>
 
         <div className="hero">
