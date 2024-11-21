@@ -1,8 +1,11 @@
-# React + Vite
+Kids' Web App 🌟
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and engaging React-based web application designed for kids, featuring:
 
-Currently, two official plugins are available:
+🎮 Two Interactive Games: Perfect for entertainment and skill-building.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📖 A Delightful Story: Encourages reading and imagination.
+
+This project aims to provide a safe, educational, and enjoyable digital experience for children.
+
+https://kidsgameswebsite.onrender.com/
